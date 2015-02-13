@@ -1,0 +1,20 @@
+public enum CalcButtons {
+    ONE,
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN,
+    EIGHT,
+    NINE,
+    ZERO,
+    DOT,
+    PERCENT,
+    PLUS,
+    MINUS,
+    MULTIPLY,
+    DIVIDE,
+    EQUALS,
+    CE
+}

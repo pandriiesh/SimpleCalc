@@ -6,15 +6,15 @@ import java.awt.event.ActionListener;
 
 public class CalcActionListener implements ActionListener
 {
-    private String jButtonText;
+    private CalcButtons jButtonText;
     private JTextField jTextField;
     private ApplicationContext context;
 
-    public String getjButtonText() {
+    public CalcButtons getjButtonText() {
         return jButtonText;
     }
 
-    public void setjButtonText(String jButtonText) {
+    public void setjButtonText(CalcButtons jButtonText) {
         this.jButtonText = jButtonText;
     }
 

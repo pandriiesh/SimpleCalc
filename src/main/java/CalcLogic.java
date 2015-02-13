@@ -2,14 +2,13 @@ import javax.swing.*;
 
 public class CalcLogic {
 
-    private String jButtonText;
+    private CalcButtons jButtonText;
     private JTextField jTextField;
     private double firstNumberDouble;
     private double secondNumberDouble;
     private static String firstNumberString = "";
     private static String operation = "";
     private static boolean operationUsed = false;
-
 
 
     public JTextField getjTextField() {
@@ -20,13 +19,14 @@ public class CalcLogic {
         this.jTextField = jTextField;
     }
 
-    public String getjButtonText() {
+    public CalcButtons getjButtonText() {
         return jButtonText;
     }
 
-    public void setjButtonText(String jButtonText) {
+    public void setjButtonText(CalcButtons jButtonText) {
         this.jButtonText = jButtonText;
     }
+
 
     void doCalculations()
     {
@@ -38,7 +38,7 @@ public class CalcLogic {
 
         switch (jButtonText)
         {
-            case "1":
+            case ONE:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -47,7 +47,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"1");
                 break;
 
-            case "2":
+            case TWO:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -56,7 +56,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"2");
                 break;
 
-            case "3":
+            case THREE:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -65,7 +65,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"3");
                 break;
 
-            case "4":
+            case FOUR:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -74,7 +74,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"4");
                 break;
 
-            case "5":
+            case FIVE:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -83,7 +83,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"5");
                 break;
 
-            case "6":
+            case SIX:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -92,7 +92,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"6");
                 break;
 
-            case "7":
+            case SEVEN:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -101,7 +101,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"7");
                 break;
 
-            case "8":
+            case EIGHT:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -110,7 +110,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"8");
                 break;
 
-            case "9":
+            case NINE:
                 if (jTextField.getText().equals("0")) jTextField.setText("");
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -119,7 +119,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"9");
                 break;
 
-            case "0":
+            case ZERO:
                 if (!jTextField.getText().equals("0")) {
                 if (operation.equals("=") || operation.equals("%")) {
                     operation="";
@@ -128,7 +128,7 @@ public class CalcLogic {
                 jTextField.setText(jTextField.getText()+"0");}
                 break;
 
-            case ".":
+            case DOT:
                 if (!jTextField.getText().contains(".")) {
                     if (jTextField.getText().equals(""))
                         jTextField.setText("0");
@@ -136,12 +136,12 @@ public class CalcLogic {
                 }
                 break;
 
-            case "%":
+            case PERCENT:
                 doCalculationsWithPercents(operation);
                 firstNumberString ="";
                 break;
 
-            case "+":
+            case PLUS:
                 if ((firstNumberString.equals("") && operation.equals("")) || operation.equals("=")) {
                     firstNumberString = jTextField.getText();
                 } else if (!operation.equals("")) {
@@ -151,7 +151,7 @@ public class CalcLogic {
                 operationUsed = true;
                 break;
 
-            case "-":
+            case MINUS:
                 if ((firstNumberString.equals("") && operation.equals("")) || operation.equals("=")) {
                     firstNumberString = jTextField.getText();
                 } else if (!operation.equals("")) {
@@ -161,7 +161,7 @@ public class CalcLogic {
                 operationUsed = true;
                 break;
 
-            case "*":
+            case MULTIPLY:
                 if ((firstNumberString.equals("") && operation.equals("")) || operation.equals("=")) {
                     firstNumberString = jTextField.getText();
                 } else if (!operation.equals("")) {
@@ -171,7 +171,7 @@ public class CalcLogic {
                 operationUsed = true;
                 break;
 
-            case "/":
+            case DIVIDE:
                 if ((firstNumberString.equals("") && operation.equals("")) || operation.equals("=")) {
                     firstNumberString = jTextField.getText();
                 } else if (!operation.equals("")) {
@@ -181,13 +181,13 @@ public class CalcLogic {
                 operationUsed = true;
                 break;
 
-            case "=":
+            case EQUALS:
                 doCalculations(operation);
                 operation = "=";
                 firstNumberString ="";
                 break;
 
-            case "CE":
+            case CE:
                 operation = "";
                 firstNumberString ="";
                 jTextField.setText("0");
@@ -229,7 +229,7 @@ public class CalcLogic {
     private void doCalculationsWithPercents(String whatOperation)
     {
         if (jTextField.getText().equals("")) {
-            jButtonText = "CE";
+            jButtonText = CalcButtons.CE;
             doCalculations();
             return;
         }

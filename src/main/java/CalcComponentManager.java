@@ -21,7 +21,6 @@ public class CalcComponentManager
         contentPane.setLayout(new GridBagLayout());
         Font buttonFont = new Font("SansSerif", Font.BOLD, 16);
 
-
         JTextField jTextField = (JTextField) context.getBean("jtextfield");
         jTextField.setEditable(false);
         jTextField.setBackground(Color.WHITE);
@@ -307,109 +306,109 @@ public class CalcComponentManager
 
         CalcActionListener actionListener1 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener1.setjTextField(jTextField);
-        actionListener1.setjButtonText(j1.getText());
+        actionListener1.setjButtonText(CalcButtons.ONE);
         actionListener1.setContext(context);
         j1.addActionListener(actionListener1);
 
         CalcActionListener actionListener2 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener2.setjTextField(jTextField);
-        actionListener2.setjButtonText(j2.getText());
+        actionListener2.setjButtonText(CalcButtons.TWO);
         actionListener2.setContext(context);
         j2.addActionListener(actionListener2);
 
         CalcActionListener actionListener3 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener3.setjTextField(jTextField);
-        actionListener3.setjButtonText(j3.getText());
+        actionListener3.setjButtonText(CalcButtons.THREE);
         actionListener3.setContext(context);
         j3.addActionListener(actionListener3);
 
         CalcActionListener actionListener4 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener4.setjTextField(jTextField);
-        actionListener4.setjButtonText(j4.getText());
+        actionListener4.setjButtonText(CalcButtons.FOUR);
         actionListener4.setContext(context);
         j4.addActionListener(actionListener4);
 
         CalcActionListener actionListener5 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener5.setjTextField(jTextField);
-        actionListener5.setjButtonText(j5.getText());
+        actionListener5.setjButtonText(CalcButtons.FIVE);
         actionListener5.setContext(context);
         j5.addActionListener(actionListener5);
 
         CalcActionListener actionListener6 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener6.setjTextField(jTextField);
-        actionListener6.setjButtonText(j6.getText());
+        actionListener6.setjButtonText(CalcButtons.SIX);
         actionListener6.setContext(context);
         j6.addActionListener(actionListener6);
 
         CalcActionListener actionListener7 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener7.setjTextField(jTextField);
-        actionListener7.setjButtonText(j7.getText());
+        actionListener7.setjButtonText(CalcButtons.SEVEN);
         actionListener7.setContext(context);
         j7.addActionListener(actionListener7);
 
         CalcActionListener actionListener8 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener8.setjTextField(jTextField);
-        actionListener8.setjButtonText(j8.getText());
+        actionListener8.setjButtonText(CalcButtons.EIGHT);
         actionListener8.setContext(context);
         j8.addActionListener(actionListener8);
 
         CalcActionListener actionListener9 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener9.setjTextField(jTextField);
-        actionListener9.setjButtonText(j9.getText());
+        actionListener9.setjButtonText(CalcButtons.NINE);
         actionListener9.setContext(context);
         j9.addActionListener(actionListener9);
 
         CalcActionListener actionListener0 = (CalcActionListener) context.getBean("calcactionlistener");
         actionListener0.setjTextField(jTextField);
-        actionListener0.setjButtonText(j0.getText());
+        actionListener0.setjButtonText(CalcButtons.ZERO);
         actionListener0.setContext(context);
         j0.addActionListener(actionListener0);
 
         CalcActionListener actionListenerDot = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerDot.setjTextField(jTextField);
-        actionListenerDot.setjButtonText(jDot.getText());
+        actionListenerDot.setjButtonText(CalcButtons.DOT);
         actionListenerDot.setContext(context);
         jDot.addActionListener(actionListenerDot);
 
         CalcActionListener actionListenerPercent = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerPercent.setjTextField(jTextField);
-        actionListenerPercent.setjButtonText(jPercent.getText());
+        actionListenerPercent.setjButtonText(CalcButtons.PERCENT);
         actionListenerPercent.setContext(context);
         jPercent.addActionListener(actionListenerPercent);
 
         CalcActionListener actionListenerPlus = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerPlus.setjTextField(jTextField);
-        actionListenerPlus.setjButtonText(jPlus.getText());
+        actionListenerPlus.setjButtonText(CalcButtons.PLUS);
         actionListenerPlus.setContext(context);
         jPlus.addActionListener(actionListenerPlus);
 
         CalcActionListener actionListenerMinus = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerMinus.setjTextField(jTextField);
-        actionListenerMinus.setjButtonText(jMinus.getText());
+        actionListenerMinus.setjButtonText(CalcButtons.MINUS);
         actionListenerMinus.setContext(context);
         jMinus.addActionListener(actionListenerMinus);
 
         CalcActionListener actionListenerMultiply = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerMultiply.setjTextField(jTextField);
-        actionListenerMultiply.setjButtonText(jMultiply.getText());
+        actionListenerMultiply.setjButtonText(CalcButtons.MULTIPLY);
         actionListenerMultiply.setContext(context);
         jMultiply.addActionListener(actionListenerMultiply);
 
         CalcActionListener actionListenerDivide = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerDivide.setjTextField(jTextField);
-        actionListenerDivide.setjButtonText(jDivide.getText());
+        actionListenerDivide.setjButtonText(CalcButtons.DIVIDE);
         actionListenerDivide.setContext(context);
         jDivide.addActionListener(actionListenerDivide);
 
         CalcActionListener actionListenerCE = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerCE.setjTextField(jTextField);
-        actionListenerCE.setjButtonText(jCE.getText());
+        actionListenerCE.setjButtonText(CalcButtons.CE);
         actionListenerCE.setContext(context);
         jCE.addActionListener(actionListenerCE);
 
         CalcActionListener actionListenerEquals = (CalcActionListener) context.getBean("calcactionlistener");
         actionListenerEquals.setjTextField(jTextField);
-        actionListenerEquals.setjButtonText(jEquals.getText());
+        actionListenerEquals.setjButtonText(CalcButtons.EQUALS);
         actionListenerEquals.setContext(context);
         jEquals.addActionListener(actionListenerEquals);
 
